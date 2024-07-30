@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>piquedeux-linkinbio</title>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@100,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@100,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap" rel="stylesheet">
     <style>
@@ -52,19 +52,20 @@
             max-width: 240px;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 4px;
+            margin-bottom: 10px;
         }
         .subtitle-second {
             font-family: 'Beth Ellen', sans-serif;
             font-size: 36px;
-            margin-bottom: 20px;
-   			-webkit-text-stroke: 1px black;
+            -webkit-text-stroke: 1px black;
             color: transparent;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
         .outline-text {
             font-family: 'Pinyon Script', cursive;
             font-size: 48px;
-            margin-bottom: 20px;
+             margin-bottom: 20px;
         }
         .rain {
             position: absolute;
@@ -122,9 +123,9 @@
         const createRainDrop = () => {
             const rainDrop = document.createElement('div');
             rainDrop.textContent = snippets[Math.floor(Math.random() * snippets.length)];
-            rainDrop.style.left = `${Math.random() * 100}vw`;
-            rainDrop.style.animationDuration = `${Math.random() * 3 + 2}s`;
-            rainDrop.style.fontSize = `${Math.random() * 12 + 12}px`;
+            rainDrop.style.left = `vw`;
+            rainDrop.style.animationDuration = `s`;
+            rainDrop.style.fontSize = `px`;
             rainContainer.appendChild(rainDrop);
 
             rainDrop.addEventListener('animationend', () => {
