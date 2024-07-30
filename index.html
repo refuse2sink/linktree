@@ -66,47 +66,48 @@
             font-family: 'Pinyon Script', cursive;
             font-size: 48px;
             margin-bottom: 20px;
-            cursor: pointer; /* Cursor bleibt wie er ist */
+            cursor: pointer;
         }
-        .rain {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 0;
-        }
-        .rain div {
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: rgba(255, 0, 0, 0.5);
-            font-family: monospace;
-            font-size: 14px;
-            animation: fall linear infinite;
-            white-space: nowrap;
-        }
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8) url('https://raw.githubusercontent.com/refuse2sink/linktree/main/IMG_5155.png') center center no-repeat;
-            background-size: cover;
-            z-index: 2;
-        }
-        .overlay.active {
-            display: block;
-        }
+      .overlay {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url('https://raw.githubusercontent.com/refuse2sink/linktree/main/IMG_5155.png') center center no-repeat;
+                    background-size: cover;
+                    z-index: 2;
+                }
+                .overlay.active {
+                    display: block;
+                }
+ .rain {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+     overflow: hidden;
+     z-index: 0;
+     background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+ }
+ 
+ .rain div {
+     position: absolute;
+     color: rgba(255, 0, 0, 0.5);
+     font-family: monospace;
+     font-size: 14px;
+     white-space: nowrap;
+     animation: fall 10s linear infinite;
+ }
+ 
+ @keyframes fall {
+     to {
+         transform: translateY(100vh);
+     }
+ }
     </style>
 </head>
 <body>
@@ -120,44 +121,44 @@
     <div class="overlay" id="overlay" onclick="hideOverlay()"></div>
     <div class="rain"></div>
     <script>
-        const snippets = [
-            '<!DOCTYPE html>', '<html lang="de">', '<head>', '<meta charset="UTF-8">', '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-            '<title>links</title>', '<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">',
-            '<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,300&display=swap" rel="stylesheet">',
-            '<style>', 'body {', 'margin: 0;', 'padding: 20px;', 'box-sizing: border-box;', 'display: flex;', 'flex-direction: column;',
-            'justify-content: center;', 'align-items: center;', 'min-height: 100vh;', 'max-width: 100%;', 'background-color: #f9f9f9;',
-            'font-family: \'Pinyon Script\', cursive;', 'cursor: url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"><circle cx="12" cy="12" r="10"/></svg>\') 12 12, auto;',
-            '}', '.button-container {', 'text-align: center;', 'margin-bottom: 20px;', '}', '.button {', 'display: inline-block;',
-            'padding: 20px 40px;', 'border: 2px solid black;', 'background-color: white;', 'color: black;', 'font-size: 24px;', 'text-decoration: none;',
-            'transition: background-color 0.3s ease;', 'cursor: pointer;', '}', '.button:hover {', 'background-color: rgb(255, 0, 0);', 'color: white;',
-            '}', '.subtitle {', 'font-family: \'Open Sans\', sans-serif;', 'font-size: 14px;', 'margin-bottom: 20px;', '}', '</style>', '</head>', '<body>',
-            '<div class="button-container">', '<h1 style="font-size: 48px; margin-bottom: 20px;">@piquedeux</h1>', '<p class="subtitle">linktree, check out these links</p>',
-            '<a href="https://www.moritzgauss.xyz" class="button">Portfolio</a>', '<a href="https://www.r2shine.de" class="button">Rise 2 Shine</a>', '</div>', '</body>', '</html>'
-        ];
-
-        const rainContainer = document.querySelector('.rain');
-        const createRainDrop = () => {
-            const rainDrop = document.createElement('div');
-            rainDrop.textContent = snippets[Math.floor(Math.random() * snippets.length)];
-            rainDrop.style.left = `vw`;
-            rainDrop.style.animationDuration = `s`;
-            rainDrop.style.fontSize = `px`;
-            rainContainer.appendChild(rainDrop);
-
-            rainDrop.addEventListener('animationend', () => {
-                rainDrop.remove();
-            });
-        };
-
-        setInterval(createRainDrop, 100);
-
-        function showOverlay() {
-            document.getElementById('overlay').classList.add('active');
-        }
-
-        function hideOverlay() {
-            document.getElementById('overlay').classList.remove('active');
-        }
-    </script>
+ const snippets = [
+     '<html>', '<html lang="de">', '<head>', '<meta charset="UTF-8">', '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+     '<title>links</title>', '<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">',
+     '<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,300&display=swap" rel="stylesheet">',
+     '<style>', 'body {', 'margin: 0;', 'padding: 20px;', 'box-sizing: border-box;', 'display: flex;', 'flex-direction: column;',
+     'justify-content: center;', 'align-items: center;', 'min-height: 100vh;', 'max-width: 100%;', 'background-color: #f9f9f9;',
+     'font-family: Pinyon Script, cursive;', 'cursor: url(data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"><circle cx="12" cy="12" r="10"/></svg>) 12 12, auto;',
+     '}', '.button-container {', 'text-align: center;', 'margin-bottom: 20px;', '}', '.button {', 'display: inline-block;',
+     'padding: 20px 40px;', 'border: 2px solid black;', 'background-color: white;', 'color: black;', 'font-size: 24px;', 'text-decoration: none;',
+     'transition: background-color 0.3s ease;', 'cursor: pointer;', '}', '.button:hover {', 'background-color: rgb(255, 0, 0);', 'color: white;',
+     '}', '.subtitle {', 'font-family: Open Sans, sans-serif;', 'font-size: 14px;', 'margin-bottom: 20px;', '}', '</style>', '</head>', '<body>',
+     '<div class="button-container">', '<h1 style="font-size: 48px; margin-bottom: 20px;">@piquedeux</h1>', '<p class="subtitle">linktree, check out these links</p>',
+     '<a href="https://www.moritzgauss.xyz" class="button">Portfolio</a>', '<a href="https://www.r2shine.de" class="button">Rise 2 Shine</a>', '</div>', '</body>', '</html>'
+ ];
+ 
+ const rainContainer = document.querySelector('.rain');
+ const createRainDrop = () => {
+     const rainDrop = document.createElement('div');
+     rainDrop.textContent = snippets[Math.floor(Math.random() * snippets.length)];
+     rainDrop.style.left = `vw`;
+     rainDrop.style.animationDuration = `s`;
+     rainDrop.style.fontSize = `px`;
+     rainContainer.appendChild(rainDrop);
+ 
+     rainDrop.addEventListener('animationend', () => {
+         rainDrop.remove();
+     });
+ };
+ 
+ setInterval(createRainDrop, 100);
+ 
+ function showOverlay() {
+     document.getElementById('overlay').classList.add('active');
+ }
+ 
+ function hideOverlay() {
+     document.getElementById('overlay').classList.remove('active');
+ }
+ </script>
 </body>
 </html>
