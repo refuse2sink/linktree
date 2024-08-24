@@ -1,30 +1,25 @@
-# Piquedeux Link in Bio Page
+## Linktree
 
-This is a simple "Link in Bio" page for @piquedeux, with a raining animation in the background featuring excerpts of HTML code as text snippets.
+# Features
 
-## Features
+- Responsive Design: Adapts to all device sizes
+- Animation
+- Interactive Links: Easily customizable to link to various pages
+- Custom Cursor: Unique cursor design for enhanced user interaction.
 
-- Responsive design using `Pinyon Script` and `Open Sans` fonts.
-- Animated background with falling HTML code snippets in RGB red color.
-- Links to "Portfolio" and "Rise 2 Shine" pages.
-- Custom cursor for a unique user experience.
+# Live Preview
 
-## Live Preview
+Deploy the project on Netlify, Replit, or your preferred hosting service to see it live.
 
-You can see a live preview of this project by deploying it to Netlify or Replit.
+# Installation
 
-## Installation
+Open in Browser**:  
+   Open `index.html` in your web browser.
 
-To run this project locally, follow these steps:
+# Important
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/piquedeux-linkinbio.git
-    cd piquedeux-linkinbio
-    ```
+When using or modifying this project, please credit the original creator, Moritz Gauss (©).
 
-2. Open `index.html` in your browser to see the page in action.
+# License
 
-## Code
-
-The complete code for the project is located in the `index.html` file in the repository.
+This project is licensed under the MIT License. See the file for details.
