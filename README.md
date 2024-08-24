@@ -9,11 +9,11 @@
 
 ## Live Preview
 
-Deploy the project on Netlify, Replit, or your preferred hosting service to see it live.
+Deploy the project to html viewing application  to see it live.
 
 ## Installation
 
-Open in Browser**:  
+Open in Browser:  
    Open `index.html` in your web browser.
 
 ## Important
